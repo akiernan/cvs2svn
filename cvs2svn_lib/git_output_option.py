@@ -303,7 +303,7 @@ class GitOutputOption(DVCSOutputOption):
     mark = self._create_commit_mark(None, svn_commit.revnum)
     logger.normal(
         'Writing post-commit r%d on %s (mark :%d)'
-        % (svn_commit.revnum, lod, mark,)
+        % (svn_commit.revnum, source_lod, mark,)
         )
     self.f.write('mark :%d\n' % (mark,))
     self.f.write(
